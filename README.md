@@ -1,5 +1,6 @@
 # algorithms-learning
-#Leetcode 题解思路和代码实现，目前将由写BryceLee完成Java实现
+- Leetcode 题解思路和代码实现，目前将由BryceLee完成Java实现
+
 | sort| Title| Classify |
 |---|---|---|
 |1    | [Two Sum][001]                           | Array                 |
@@ -8,8 +9,8 @@
 |20|[Valid Parentheses][020]|
 |26|[Remove Duplicates from Sorted Array][026]|Array
 |27|[Remove Element][027]|Array,Two Pointers
-|35|[Search Insert Position][035]||
-|53| [Maximum Subarray][053]|Array| 
+|35|[Search Insert Position][035]|
+|53| [Maximum Subarray][053]|Array 
 
 
 [001]:https://github.com/BryceLee/algorithms-learning/leetcode/001.md
