@@ -13,11 +13,11 @@
 |53| [Maximum Subarray][053]|Array 
 
 
-[001]:https://github.com/BryceLee/algorithms-learning/leetcode/001.md
-[011]:https://github.com/BryceLee/algorithms-learning/leetcode/011.md
-[015]:https://github.com/BryceLee/algorithms-learning/leetcode/015.md
-[020]:https://github.com/BryceLee/algorithms-learning/leetcode/020.md
-[026]:https://github.com/BryceLee/algorithms-learning/leetcode/026.md
-[027]:https://github.com/BryceLee/algorithms-learning/leetcode/027.md
-[035]:https://github.com/BryceLee/algorithms-learning/leetcode/035.md
-[053]:https://github.com/BryceLee/algorithms-learning/leetcode/053.md
+[001]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/001.md
+[011]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/011.md
+[015]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/015.md
+[020]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/020.md
+[026]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/026.md
+[027]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/027.md
+[035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
+[053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
