@@ -1,7 +1,7 @@
 # algorithms-learning
 #Leetcode 题解思路和代码实现，目前将由写BryceLee完成Java实现
 | sort| Title| Classify |
-|---|---|---|
+|----|--------------------|-----------|
 |1    | [Two Sum][001]                           | Array                 |
 |11    | [Container With Most Water][011]| Two Pointers|
 |15|[3Sum][015]|Two Poniters|
