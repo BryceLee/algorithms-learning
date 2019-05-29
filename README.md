@@ -11,7 +11,7 @@
 |20|[Valid Parentheses][020]|
 |26|[Remove Duplicates from Sorted Array][026]|Array
 |27|[Remove Element][027]|Array,Two Pointers
-|35|[Search Insert Position][035]|
+|35|[Search Insert Position][035]|Binary Search
 |53| [Maximum Subarray][053]|Array 
 
 
@@ -23,6 +23,9 @@
 [027]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/027.md
 [035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
 [053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
+
+## 递归
+## 排序
 
 # Thanks:
 - [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#1-%E6%9C%80%E4%BD%B3)
