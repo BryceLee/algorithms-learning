@@ -24,8 +24,32 @@
 [035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
 [053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
 
-## 递归
-## 排序
-
+## 递归（recursion）
+- 层级
+- 终止条件
+## 分治（-Divide&Conquer）
+- Divide:Problem-->SubProblem1,SubProblem2...
+- Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
+- Merge:Answer1+Answer2+...=Answer
+## 动态规划
+- 条件
+    - 可以分治
+- 存储每一步的决定，可回退
+## 贪心算法
+- 条件
+    - 可以分治
+- 每次都决定一个当前最优选项
+- 缺点：解决的问题范围小，不可修改做过的决定
+## 排序(sort)
+- 冒泡
+- 快排
+## 二分查找（Binary Search）
+- 条件  
+    - sorted（递增或递减）
+    - 可以通过下标找到数据
+- 时间复杂度O(log2（n）)（以2为底，n的对数）
 # Thanks:
 - [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#1-%E6%9C%80%E4%BD%B3)
+- [s32n/algorithm](https://github.com/s32n/algorithm)
+- [坐在马桶上学算法](http://wiki.jikexueyuan.com/project/easy-learn-algorithm/fast-sort.html)
+
