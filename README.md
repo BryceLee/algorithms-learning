@@ -5,14 +5,17 @@
 
 | sort| Title| Classify |
 |----|--------------------|-----------|
-|1    | [Two Sum][001]                           | Array                 |
-|11    | [Container With Most Water][011]| Two Pointers|
+|1    | [two sum][001]                           | Array                 |
+|11    | [container with most water][011]| Two Pointers|
 |15|[3Sum][015]|Two Poniters|
-|20|[Valid Parentheses][020]|
-|26|[Remove Duplicates from Sorted Array][026]|Array
-|27|[Remove Element][027]|Array,Two Pointers
-|35|[Search Insert Position][035]|Binary Search
-|53| [Maximum Subarray][053]|Array 
+|20|[valid parentheses][020]|
+|26|[remove duplicates from sorted array][026]|Array
+|27|[remove element][027]|Array,Two Pointers
+|35|[search insert position][035]|Binary Search
+|53| [maximum subarray][053]|Array
+|687| [longest-univalue-path][687]|Recursion
+|783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree
+|938| [range-sum-of-bst][938]|Recursion,Binary Search Tree
 
 
 [001]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/001.md
@@ -23,6 +26,9 @@
 [027]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/027.md
 [035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
 [053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
+[687]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/687.md
+[783]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/783.md
+[938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
 
 ## 递归（recursion）
 - 层级
