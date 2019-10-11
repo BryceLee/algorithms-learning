@@ -28,7 +28,11 @@
 [687]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/687.md
 [783]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/783.md
 [938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
-
+## Stack
+## Queue
+## Tree
+## Heap
+## Graph
 ## 递归（recursion）
 - 层级
 - 终止条件
@@ -36,6 +40,8 @@
 - Divide:Problem-->SubProblem1,SubProblem2...
 - Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
 - Merge:Answer1+Answer2+...=Answer
+## Brandth-First-Search(base on Graph)
+## Deepth-First-Search(base on Graph)
 ## 动态规划
 - 条件
     - 可以分治
