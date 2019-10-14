@@ -1,7 +1,9 @@
 ## HashMap
 
 - HashMap实现了Map接口，Map提供了大量的可配置的操作，允许空key和空值，Hashmap几乎和Hashtable一样，除了前者允许空值和不是同步的。Haspmap无法保证Map的顺序，随着时间的推移顺序也可能会改变
-- 是基于数组的扩张，利用了数组可以通过下标随机访问元素的特性，再通过hash（key）函数计算出来的hash值来决定元素存储的位置。
+- 是基于数组的扩张，利用了数组可以通过下标随机访问元素的特性，再通过hash（key）函数计算出来的hash值来决定元素存储的位置。如果hash碰撞就把新存储在链表中，链表长度到达8就把链表转成红黑树。
+- 存储结构大致如图：
+![](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2752280655,620147884&fm=26&gp=0.jpg)
 - 假设hash功能把数据元素适当的分散在存储空间里。这个实现给get,put操作提供了固定时间的性能。对集合的迭代，需要和Hashmap容量和键值对的大小成比例的时间。因此，如果要求比较高的迭代性能，初始容量和加载因子都不宜太大。
 - Capacity
     - 存储空间数量
@@ -19,7 +21,7 @@
 - 使用链表和红黑树来尽可能避免hash冲突
 ### 几个重要参数
 - static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16 默认初始化容量
-- static final int MAXIMUM_CAPACITY = 1 << 30;//容量必须是小于这个值的2的平方
+- static final int MAXIMUM_CAPACITY = 1 << 30;//容量必须是小于这个值的2的平方数
 - static final int TREEIFY_THRESHOLD = 8;//链表转换成红黑树的链表（树）的阀值
 - static final int UNTREEIFY_THRESHOLD = 6;
 - static final int MIN_TREEIFY_CAPACITY = 64;
