@@ -1,5 +1,5 @@
 ## HashMap
-
+- 意义：为了在不知道所要查询数据的位置信息的时候，帮助我们ß尽快找到目标对象而生。
 - HashMap实现了Map接口，Map提供了大量的可配置的操作，允许空key和空值，Hashmap几乎和Hashtable一样，除了前者允许空值和不是同步的。Haspmap无法保证Map的顺序，随着时间的推移顺序也可能会改变
 - 是基于数组的扩张，利用了数组可以通过下标随机访问元素的特性，再通过hash（key）函数计算出来的hash值来决定元素存储的位置。如果hash碰撞就把新存储在链表中，链表长度到达8就把链表转成红黑树。
 - 存储结构大致如图：
@@ -25,7 +25,15 @@
 - static final int TREEIFY_THRESHOLD = 8;//链表转换成红黑树的链表（树）的阀值
 - static final int UNTREEIFY_THRESHOLD = 6;
 - static final int MIN_TREEIFY_CAPACITY = 64;
-
+# 关于Hash函数
+- [参考这篇](https://www.hollischuang.com/archives/2091)
+```
+(JDK 1.8)
+static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+```
 
 ## Thanks:
 - https://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/

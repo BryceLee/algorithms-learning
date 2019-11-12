@@ -22,3 +22,6 @@
 - LinkedHashMap：支持记住键值添加顺序的映射表
 - WeakHashMap：支持值自动垃圾回收的映射表
 - IdentityHashMap；用==而非equals来比较键值的映射表
+- CopyOnWirteArrayList:[推荐阅读](https://juejin.im/post/5aaa2ba8f265da239530b69e)
+- ConcurrentHashMap：[推荐阅读](https://crossoverjie.top/2018/07/23/java-senior/ConcurrentHashMap/)
+- 注意：任何集合类都可以通过Collections.synchronizedList（new ...）来达到线程同步的目的。
