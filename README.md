@@ -4,30 +4,70 @@
 
 | sort| Title| Classify |
 |----|--------------------|-----------|
-|1    | [two sum][001]                           | Array                 |
-|11    | [container with most water][011]| Two Pointers|
+|1    | [two sum][001]                           | Array       |
+|2    | [Add Two Numbers][002]| LinkedList|
+|3    | [Longest Substring Without Repeating Characters][003]| Two Pointers|
+|7    | [Reverse Integer][007]| Math|
+|9    | [Palindrome Number  ][009]| Two Pointers|
+|11    | [container with most water][011]| HashTable,Two Pointers,String,SlidingWindow|
 |15|[3Sum][015]|Two Poniters|
 |20|[valid parentheses][020]|
+|[21](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[Merge Two Sorted Lists][021]|LinkedList
 |26|[remove duplicates from sorted array][026]|Array
 |27|[remove element][027]|Array,Two Pointers
 |35|[search insert position][035]|Binary Search
 |53| [maximum subarray][053]|Array
+|66| [Plus One][066]|Array
+|69| [Sqrt(x)][069]|Math
+|[70](https://leetcode-cn.com/problems/climbing-stairs/)| [climbing-stairs][070]|Dynamic Programming
+|[104]()| [ Maximum Depth of Binary Tree][104]|Tree
+|[121](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)| [ Best Time to Buy and Sell Stock][121]|Array,Dynamic Programming
+|[122](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Best Time to Buy and Sell Stock II][122]|Array,Greedy
+|[136](https://leetcode-cn.com/problems/single-number/)| [Single Number][136]|Math
+|141|[linked-list-cycle][141]|LinkedList,Two Pointers
+|142|[linked-list-cycle2][142]|LinkedList,Two Pointers
+|160|[Intersection of Two Linked Lists][160]|LinkedList
+|206|[Reverse Linked List][206]|LinkedList
+|[225](https://leetcode-cn.com/problems/implement-stack-using-queues/)|[Implement Stack using Queues][225]|Stack
+|[232](https://leetcode-cn.com/problems/implement-queue-using-stacks/submissions/)|[ Implement Queue using Stacks][232]|Stack
+|[349](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|[ Intersection of Two Arrays][349]|Sort,HashTable,Two Pointers
 |687| [longest-univalue-path][687]|Recursion
 |783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree
 |938| [range-sum-of-bst][938]|Recursion,Binary Search Tree
-
-
+|1038| [range-sum-of-bst][1038]|Recursion,Binary Search Tree
+|1046| [range-sum-of-bst][1046]|Recursion,Binary Search Tree
 [001]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/001.md
+[002]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/002.md
+[003]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/003.md
+[007]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/007.md
+[009]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/009.md
 [011]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/011.md
 [015]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/015.md
 [020]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/020.md
+[021]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/021.md
 [026]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/026.md
 [027]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/027.md
 [035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
 [053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
+[066]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/066.md
+[069]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/069.md
+[070]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/070.md
+[104]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/104.md
+[121]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/121.md
+[122]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/122.md
+[136]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/136.md
+[141]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/141.md
+[142]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/142.md
+[160]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/160.md
+[206]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/206.md
+[225]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/225.md
+[232]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/232.md
+[349]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/349.md
 [687]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/687.md
 [783]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/783.md
 [938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
+[1038]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1038.md
+[938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1046.md
 ## HEAP
 - 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
 - 堆中的每个节点的值必须大于等于（或者小于等于）其子树中每个节点的值
