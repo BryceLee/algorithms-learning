@@ -69,56 +69,7 @@
 [938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
 [1038]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1038.md
 [1046]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1046.md
-## HEAP
-- 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
-- 堆中的每个节点的值必须大于等于（或者小于等于）其子树中每个节点的值
-## Stack
-## Queue
-- PriorityQueue（默认是递增的队列，也就是小顶堆）,求最值(或者第几大元素)，求中位数等场景 （leetcode 703.）
-  - 实现机制可以是HEAP
-  - 也可以是 BinarySeachTree
-```
-Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
-      @Override
-      public int compare(Integer o1, Integer o2) {
-        //System.out.println("o1=" + o1 + ",o2=" + o2);
-        //o2 is in front of o1  
-        //if (o1>o2){
-          //return 1;//整数递增
-        //}else {
-          //return -1;//负数递减
-        //}
-        return o2 - o1;
-        if（o2>o1）{
-          return -1;
-        }else{
-          return 1;
-        }
-      }
-    });
-```
-## [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
-
-## 递归（recursion）
-- 层级
-- 终止条件
-## 分治（-Divide&Conquer）
-- Divide:Problem-->SubProblem1,SubProblem2...
-- Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
-- Merge:Answer1+Answer2+...=Answer
-## Brandth-First-Search(base on Graph)
-## Deepth-First-Search(base on Graph)
-## 动态规划
-- 条件
-    - 可以分治
-- 存储每一步的决定，可回退
-## 贪心算法
-- 条件
-    - 可以分治
-- 每次都决定一个当前最优选项
-- 缺点：解决的问题范围小，不可修改做过的决定
 ## 排序(sort)
-
 - 涉及的概念
     - 有序度，是有序元素对的数量，有序元素对满足，如果i<j，则a[i]<=a[j]
     - 逆序度,是逆序对的数量，满足如果i<j,则a[i]>a[j]
@@ -217,13 +168,59 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
 }
 或者你可以借助哨兵模式来简化判断条件
 ```
-
 - 快排
 ## 二分查找（Binary Search）
 - 条件  
     - sorted（递增或递减）
     - 可以通过下标找到数据
 - 时间复杂度O(log2（n）)（以2为底，n的对数）
+## HEAP
+- 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
+- 堆中的每个节点的值必须大于等于（或者小于等于）其子树中每个节点的值
+## Stack
+## Queue
+- PriorityQueue（默认是递增的队列，也就是小顶堆）,求最值(或者第几大元素)，求中位数等场景 （leetcode 703.）
+  - 实现机制可以是HEAP
+  - 也可以是 BinarySeachTree
+```
+Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
+      @Override
+      public int compare(Integer o1, Integer o2) {
+        //System.out.println("o1=" + o1 + ",o2=" + o2);
+        //o2 is in front of o1  
+        //if (o1>o2){
+          //return 1;//整数递增
+        //}else {
+          //return -1;//负数递减
+        //}
+        return o2 - o1;
+        if（o2>o1）{
+          return -1;
+        }else{
+          return 1;
+        }
+      }
+    });
+```
+## 递归（recursion）
+- 层级
+- 终止条件
+## 分治（-Divide&Conquer）
+- Divide:Problem-->SubProblem1,SubProblem2...
+- Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
+- Merge:Answer1+Answer2+...=Answer
+## Brandth-First-Search(base on Graph)
+## Deepth-First-Search(base on Graph)
+## 动态规划
+- 条件
+    - 可以分治
+- 存储每一步的决定，可回退
+## 贪心算法
+- 条件
+    - 可以分治
+- 每次都决定一个当前最优选项
+- 缺点：解决的问题范围小，不可修改做过的决定
+## [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
 ## Graph
 ## Cache
 - LRU
