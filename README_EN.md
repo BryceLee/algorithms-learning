@@ -213,7 +213,7 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
     array[index]=temp[index];
   }
 }
-或者借助哨兵来做
+or you can use sentry mode.
 ```
 
 - 快排

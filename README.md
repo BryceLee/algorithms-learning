@@ -2,40 +2,40 @@
 
 ## Leetcode Java Solutions
 
-| sort| Title| Classify |
-|----|--------------------|-----------|
-|1    | [two sum][001]                           | Array       |
-|2    | [Add Two Numbers][002]| LinkedList|
-|3    | [Longest Substring Without Repeating Characters][003]| Two Pointers|
-|7    | [Reverse Integer][007]| Math|
-|9    | [Palindrome Number  ][009]| Two Pointers|
-|11    | [container with most water][011]| HashTable,Two Pointers,String,SlidingWindow|
-|15|[3Sum][015]|Two Poniters|
-|20|[valid parentheses][020]|
-|[21](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[Merge Two Sorted Lists][021]|LinkedList|
-|26|[remove duplicates from sorted array][026]|Array|
-|27|[remove element][027]|Array,Two Pointers|
-|35|[search insert position][035]|Binary Search|
-|53| [maximum subarray][053]|Array|
-|66| [Plus One][066]|Array|
-|69| [Sqrt(x)][069]|Math|
-|[70](https://leetcode-cn.com/problems/climbing-stairs/)| [climbing-stairs][070]|Dynamic Programming|
-|[104]()| [ Maximum Depth of Binary Tree][104]|Tree
-|[121](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)| [ Best Time to Buy and Sell Stock][121]|Array,Dynamic Programming
-|[122](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Best Time to Buy and Sell Stock II][122]|Array,Greedy|
-|[136](https://leetcode-cn.com/problems/single-number/)| [Single Number][136]|Math|
-|141|[linked-list-cycle][141]|LinkedList,Two Pointers|
-|142|[linked-list-cycle2][142]|LinkedList,Two Pointers|
-|160|[Intersection of Two Linked Lists][160]|LinkedList|
-|206|[Reverse Linked List][206]|LinkedList|
-|[225](https://leetcode-cn.com/problems/implement-stack-using-queues/)|[Implement Stack using Queues][225]|Stack|
-|[232](https://leetcode-cn.com/problems/implement-queue-using-stacks/submissions/)|[ Implement Queue using Stacks][232]|Stack
-|[349](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|[ Intersection of Two Arrays][349]|Sort,HashTable,Two Pointers
-|687| [longest-univalue-path][687]|Recursion
-|783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree
-|938| [range-sum-of-bst][938]|Recursion,Binary Search Tree
-|[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree
-|[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy
+| sort| Title| Classify |Solutions|
+|----|--------------------|-----------|-----
+|1    | [two sum][001]                           | Array       |[java][001]|
+|2    | [Add Two Numbers][002]| LinkedList|[java][002]
+|3    | [Longest Substring Without Repeating Characters][003]| Two Pointers|[java][003]
+|7    | [Reverse Integer][007]| Math|[java][007]
+|9    | [Palindrome Number  ][009]| Two Pointers|[java][009]
+|11    | [container with most water][011]| HashTable,Two Pointers,String,SlidingWindow|[java][011]
+|15|[3Sum][015]|Two Poniters|[java][015]
+|20|[valid parentheses][020]||[java][020]|
+|[21](https://leetcode-cn.com/problems/merge-two-sorted-lists/)|[Merge Two Sorted Lists][021]|LinkedList|[java][021]
+|26|[remove duplicates from sorted array][026]|Array|[java][026]
+|27|[remove element][027]|Array,Two Pointers|[java][027]
+|35|[search insert position][035]|Binary Search|[java][035]
+|53| [maximum subarray][053]|Array|[java][053]
+|66| [Plus One][066]|Array|[java][066]
+|69| [Sqrt(x)][069]|Math|[java][069]
+|[70](https://leetcode-cn.com/problems/climbing-stairs/)| [climbing-stairs][070]|Dynamic Programming|[java][070]
+|[104]()| [ Maximum Depth of Binary Tree][104]|Tree|[java][104]
+|[121](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)| [ Best Time to Buy and Sell Stock][121]|Array,Dynamic Programming|[java][121]
+|[122](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Best Time to Buy and Sell Stock II][122]|Array,Greedy|[java][122]
+|[136](https://leetcode-cn.com/problems/single-number/)| [Single Number][136]|Math|[java][136]
+|141|[linked-list-cycle][141]|LinkedList,Two Pointers|[java][141]
+|142|[linked-list-cycle2][142]|LinkedList,Two Pointers|[java][142]
+|160|[Intersection of Two Linked Lists][160]|LinkedList|[java][160]
+|206|[Reverse Linked List][206]|LinkedList|[java][206]
+|[225](https://leetcode-cn.com/problems/implement-stack-using-queues/)|[Implement Stack using Queues][225]|Stack|[java][225]
+|[232](https://leetcode-cn.com/problems/implement-queue-using-stacks/submissions/)|[ Implement Queue using Stacks][232]|Stack|[ java][232]
+|[349](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|[ Intersection of Two Arrays][349]|Sort,HashTable,Two Pointers|[ java][349]
+|687| [longest-univalue-path][687]|Recursion|[java][687]
+|783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree| [java][783]
+|938| [range-sum-of-bst][938]|Recursion,Binary Search Tree|[java][938]
+|[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree|[java][1038]
+|[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy|[java][1046]
 
 [001]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/001.md
 [002]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/002.md
@@ -122,7 +122,7 @@
     - 空间复杂度是O(n)
 
   大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
-```
+``` java
 mergesort(int[] array,int n){
 //n=array.lenth
 merge(array,0,n-1);
