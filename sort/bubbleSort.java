@@ -2,12 +2,12 @@ import javax.swing.tree.TreeNode;
 
 public class bubbleSort {
     public static void main(String[] a){
-        int[] todosort=new int[]{4,2,3,1,7,9};
+        int[] todosort=new int[]{99,100,4,2,3,1,7,9};
         int time=0;
         int changetime=0;
         boolean flag=false;
+        int temp;
         for(int i=todosort.length-1;i>=0;i--){
-            int temp;
             flag=false;
             for(int j=0;j<=i-1;j++){
                 if(todosort[j]>todosort[j+1]){

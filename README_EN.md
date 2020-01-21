@@ -169,8 +169,6 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
     - 时间复杂度是nlogn
     - 非原地排序算法（合并子数组，需要额外空间）
     - 空间复杂度是O(n)
-
-  大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
 ```
 mergesort(int[] array,int n){
 //n=array.lenth
@@ -215,7 +213,7 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
     array[index]=temp[index];
   }
 }
-或者你可以借助哨兵模式来简化判断条件
+或者借助哨兵来做
 ```
 
 - 快排
