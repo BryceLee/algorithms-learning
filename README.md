@@ -69,7 +69,7 @@
 [938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
 [1038]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1038.md
 [1046]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1046.md
-## 排序(sort)
+# 排序(sort)
 - 涉及的概念
     - 有序度，是有序元素对的数量，有序元素对满足，如果i<j，则a[i]<=a[j]
     - 逆序度,是逆序对的数量，满足如果i<j,则a[i]>a[j]
@@ -81,47 +81,53 @@
     - 稳定性：稳定与否等介于相同大小值的顺序是否会被再次更改。
 - 各排序复杂度情况
 ![](https://static001.geekbang.org/wechat/images/28/28f8f7971b1f226775a563ddb63184ed.png)
-- 冒泡排序 
+## 冒泡排序 
 [java implementation](https://github.com/BryceLee/algorithms-learning/blob/master/sort/bubbleSort.java)
-    - 原理：每次遍历比较交换元素，找到最值，放到末尾。
-    - 比较或者交换的时候有序度加1，交换总次数是n*(n-1)/2-初始有序度,也就是逆序度。
-    - 稳定性：
-        - 稳定，因为大小相等不做交换。
-    - 复杂度
-        - 时间
-            - 最好情况，不需要交换，一次冒泡，时间复杂度O(n)
+- 原理：每次遍历比较交换元素，找到最值，放到末尾。
+- 比较或者交换的时候有序度加1，交换总次数是n*(n-1)/2-初始有序度,也就是逆序度。
+- 稳定性：
+    - 稳定，因为大小相等不做交换。
+- 复杂度
+    - 时间
+        - 最好情况，不需要交换，一次冒泡，时间复杂度O(n)
             - 最坏情况，是目标顺序的逆序，时间复杂度O(n^2)
-        - 空间
-            - 平均情况下比较次数取中间值:n*(n-1)/4，取平均时间复杂度O(n^2)（非严格推导的复杂度）
-            - 空间复杂度上仅需要常量级的临时空间，是O(1),是原地排序算法。
-- 插入排序 [java code]((https://github.com/BryceLee/algorithms-learning/blob/master/sort/insertSort.java)
-    - 适用于少量元素的排序
-    - 有点冒泡升级版本的意味，也涉及到比较和移动元素。交换次数也是逆序度。
-    - 原理：分为两个区间，一个为排序区间，一个为未排序区间，初始状态下排序区间只有第一个元素，如果把第二个元素，也就是未排序区间的第一个元素，加入到排序区间中排序，然后继续拿未排序区间的第一个元素，加入排序区间去排序，直到完成排序。像扑克牌，抽牌插入手牌中排序。(注意，从算法实现上，从排序区间的尾部开始比较更佳，如果从首部开始，一次比较可能是n-1次移位，不是一个好方案，n是元素数量)
-    - 复杂度
-        - 空间
+    - 空间
+        - 平均情况下比较次数取中间值:n*(n-1)/4，取平均时间复杂度O(n^2)（非严格推导的复杂度）
+        - 空间复杂度上仅需要常量级的临时空间，是O(1),是原地排序算法。
+## 插入排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/insertSort.java)
+- 适用于少量元素的排序
+- 有点冒泡升级版本的意味，也涉及到比较和移动元素。交换次数也是逆序度。
+- 原理：分为两个区间，一个为排序区间，一个为未排序区间，初始状态下排序区间只有第一个元素，如果把第二个元素，也就是未排序区间的第一个元素，加入到排序区间中排序，然后继续拿未排序区间的第一个元素，加入排序区间去排序，直到完成排序。像扑克牌，抽牌插入手牌中排序。(注意，从算法实现上，从排序区间的尾部开始比较更佳，如果从首部开始，一次比较可能是n-1次移位，不是一个好方案，n是元素数量)
+- 复杂度
+    - 空间
             - 空间复杂度是O（1），是一个原地排序算法
-        - 时间
+    - 时间
             - 最好情况下，就是排好序的情况，每个数都比较一次即插入到本身位置，时间复杂度是O（n）
             - 最坏情况下，正好是目标顺序的逆序，每次插入都在数组的首位插入，时间复杂度是O(n^2)
             - 平均情况下，O(n^2)
-    - 由于冒泡排序，虽然复杂度和交换次数一样；但是冒泡每次交换数据，都需要三次赋值操作，而插入排序仅需要一次赋值操作。
-    - 稳定性：
-        - 稳定，对于相同大小的值，先出现的排在前面。
-- 选择排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/SortSelection.java)
-    - 原理：分为排序和未排序区间，每次都从未排序区间拿到最值，然后放到排序区间尾部（这个位置原来的数和最值位置交换，可能把与未排序区间数值大小相等的数字，放到更后面，所以不稳定）
-    - 空间复杂度O（1）
-    - 时间复杂度最坏最好平均都是O(n^2)
-    - 稳定性：
+- 由于冒泡排序，虽然复杂度和交换次数一样；但是冒泡每次交换数据，都需要三次赋值操作，而插入排序仅需要一次赋值操作。
+- 稳定性：
+    - 稳定，对于相同大小的值，先出现的排在前面。
+##  选择排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/SortSelection.java)
+- 原理：分为排序和未排序区间，每次都从未排序区间拿到最值，然后放到排序区间尾部（这个位置原来的数和最值位置交换，可能把与未排序区间数值大小相等的数字，放到更后面，所以不稳定）
+- 空间复杂度O（1）
+- 时间复杂度最坏最好平均都是O(n^2)
+- 稳定性：
         - 不稳定，他的原理决定了它的不稳定性。
-- 归并排序 
-    - 总是一分为二处理，处理好了再合并。分治思路+递归实现。
-    - 是一个稳定的算法，可以参看伪代码
-    - 时间复杂度是nlogn
+## 归并排序 
+- 总是一分为二处理，处理好了再合并。分治思路+递归实现。
+- 是一个稳定的算法，可以参看伪代码
+- 时间复杂度是nlogn
+  - 推导过程： 
+    - T(n)=2*T(n/2)+n 每次合并都需要两个子数据的时间和合并两个子数组的时间
+        - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
+        ..
+        - T(n)=2^mT(n/(2^m))+m*n
+        - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
     - 非原地排序算法（合并子数组，需要额外空间）
     - 空间复杂度是O(n)
 
-  大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
+- 大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
 ``` java
 mergesort(int[] array,int n){
 //n=array.lenth
@@ -168,17 +174,105 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
 }
 或者你可以借助哨兵模式来简化判断条件
 ```
-- 快排
-## 二分查找（Binary Search）
+## 快排(QuickSort) 
+- 思路从数组中是找到一个元素作为分区点，小于它的排在左边，大于它的排在右边；然后在左右区间继续找分区点，重复上一次操作，直到排序完成。分治思想+递归实现。锚点可以选定数组的最后一个元素(或者区间内随机的任意一个元素)。但是一个区间，排序完成后，锚点会位于区间的中间位置。
+- 原地排序算法，这优于归并排序。
+- 时间复杂度是O(nlogn)，和归并一样
+      - 推导过程： 
+        - T(n)=2*T(n/2)+n 每次分区都需要两个子数据的时间加上找到分区点的时间
+        - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
+        ..
+        - T(n)=2^mT(n/(2^m))+m*n
+        - 特殊值法，当T(n/(2^m))=T(1)时 -->n/(2^m)=1
+        - 所以m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
+- 不稳定，分区点在交换的时候就可能导致不稳定
+- 极端情况下是O(n^2)，比如递增数组，每次又选最后一个数为分区点。
+- [java code](./sort/QuickSort.java)
+```java
+//伪代码如下
+quicksort(array){
+sort(array,0,arry.length-1)
+}
+
+sort(array,start,end){
+  if(start>=end){
+    return
+  }
+  //获取分区点下标
+  indexP=getPartition(array,start,end)
+  sort(array,start,indexP-1)
+  sort(array,indexP+1,end)
+}
+
+getPartition(array,start,end){
+  p=array[end]
+  i,j=start
+  while(j<end){
+    if(array[j]<=p){
+      swap array[i] with array[j]
+      i++
+      //i左边的数都小于p
+    }else{
+      //延迟交换
+    }
+    j++
+  }
+  swap array[i] with array[end]
+  return i;
+}
+```
+# 递归（recursion）
+- 层级
+- 终止条件
+# 二分查找（Binary Search）
 - 条件  
-    - sorted（递增或递减）
-    - 可以通过下标找到数据
-- 时间复杂度O(log2（n）)（以2为底，n的对数）
-## HEAP
+    - 有序数据，可以通过下标找到数据，可以理解为仅使用于数组
+    - 数据相对而言是静态的，不会频繁变化
+    - 数据量小且比较操作不耗时也没必要用二分查找
+    - 数据大也用不了，因为数组要求连续的内存空间，如果内存吃紧也不适合
+- 时间复杂度O(logn)
+- 具体实现：[java code](./BinarySearch/binarySearch.java)
+- 递归法伪代码：
+```java
+binarySearch(int[] array，int target){
+search(array,target,0,array.length-1);
+}
+search(int[] array,int target,int start,int end){
+int middle=start+(end-start)>>1;
+if(target==array[middle]){
+  return middle;
+}else if(target>array[middle]){
+  return search(array,target,middle+1,end);
+}else{
+  return search(array,target,start,middle-1);
+}
+}
+```
+- 遍历法伪代码：
+```java
+binarySearch(int[] array，int target){
+search(array,target,0,array.length-1);
+}
+search(int[] array,int target,int start,int end){
+while(start<=end){
+  int mid=start+((end-start)>>2)
+  if(array[mid]==target){
+    return mid;
+  }else if(target>array[mid]){
+    start=mid+1;
+  }else{
+    end=mid-1;
+  }
+}
+return -1;
+}
+```
+
+# HEAP
 - 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
 - 堆中的每个节点的值必须大于等于（或者小于等于）其子树中每个节点的值
-## Stack
-## Queue
+# Stack
+# Queue
 - PriorityQueue（默认是递增的队列，也就是小顶堆）,求最值(或者第几大元素)，求中位数等场景 （leetcode 703.）
   - 实现机制可以是HEAP
   - 也可以是 BinarySeachTree
@@ -202,27 +296,25 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
       }
     });
 ```
-## 递归（recursion）
-- 层级
-- 终止条件
-## 分治（-Divide&Conquer）
+
+# 分治（-Divide&Conquer）
 - Divide:Problem-->SubProblem1,SubProblem2...
 - Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
 - Merge:Answer1+Answer2+...=Answer
-## Brandth-First-Search(base on Graph)
-## Deepth-First-Search(base on Graph)
-## 动态规划
+# Brandth-First-Search(base on Graph)
+# Deepth-First-Search(base on Graph)
+# 动态规划
 - 条件
     - 可以分治
 - 存储每一步的决定，可回退
-## 贪心算法
+# 贪心算法
 - 条件
     - 可以分治
 - 每次都决定一个当前最优选项
 - 缺点：解决的问题范围小，不可修改做过的决定
-## [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
-## Graph
-## Cache
+# [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
+# Graph
+# Cache
 - LRU
     - 新增数据被添加到链表头部，添加满了，最后的数据是被丢弃。[Lru](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#2-%E6%9C%80%E8%BF%91%E6%9C%80%E4%B9%85%E6%9C%AA%E4%BD%BF%E7%94%A8)
 # 推荐阅读
