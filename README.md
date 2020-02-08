@@ -20,7 +20,8 @@
 |66| [Plus One][066]|Array|[java][066]
 |69| [Sqrt(x)][069]|Math|[java][069]
 |[70](https://leetcode-cn.com/problems/climbing-stairs/)| [climbing-stairs][070]|Dynamic Programming|[java][070]
-|[104]()| [ Maximum Depth of Binary Tree][104]|Tree|[java][104]
+|[104]()| [ Maximum Depth of Binary Tree][104]|Tree,Recursion,BFS,DFS|[java][104]
+|[111](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree)| [minimum-depth-of-binary-tree][111]|Tree,Recursion,BFS,DFS|[java][111]
 |[121](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)| [ Best Time to Buy and Sell Stock][121]|Array,Dynamic Programming|[java][121]
 |[122](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Best Time to Buy and Sell Stock II][122]|Array,Greedy|[java][122]
 |[136](https://leetcode-cn.com/problems/single-number/)| [Single Number][136]|Math|[java][136]
@@ -53,7 +54,8 @@
 [066]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/066.md
 [069]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/069.md
 [070]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/070.md
-[104]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/104.md
+[104]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/104.java
+[111]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/111.java
 [121]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/121.md
 [122]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/122.md
 [136]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/136.md
@@ -69,7 +71,8 @@
 [938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
 [1038]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1038.md
 [1046]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1046.md
-# 排序(sort)
+# Algorithms
+## 排序(sort)
 - 涉及的概念
     - 有序度，是有序元素对的数量，有序元素对满足，如果i<j，则a[i]<=a[j]
     - 逆序度,是逆序对的数量，满足如果i<j,则a[i]>a[j]
@@ -81,7 +84,7 @@
     - 稳定性：稳定与否等介于相同大小值的顺序是否会被再次更改。
 - 各排序复杂度情况
 ![](https://static001.geekbang.org/wechat/images/28/28f8f7971b1f226775a563ddb63184ed.png)
-## 冒泡排序 
+### 冒泡排序 
 [java implementation](https://github.com/BryceLee/algorithms-learning/blob/master/sort/bubbleSort.java)
 - 原理：每次遍历比较交换元素，找到最值，放到末尾。
 - 比较或者交换的时候有序度加1，交换总次数是n*(n-1)/2-初始有序度,也就是逆序度。
@@ -94,7 +97,7 @@
     - 空间
         - 平均情况下比较次数取中间值:n*(n-1)/4，取平均时间复杂度O(n^2)（非严格推导的复杂度）
         - 空间复杂度上仅需要常量级的临时空间，是O(1),是原地排序算法。
-## 插入排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/insertSort.java)
+### 插入排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/insertSort.java)
 - 适用于少量元素的排序
 - 有点冒泡升级版本的意味，也涉及到比较和移动元素。交换次数也是逆序度。
 - 原理：分为两个区间，一个为排序区间，一个为未排序区间，初始状态下排序区间只有第一个元素，如果把第二个元素，也就是未排序区间的第一个元素，加入到排序区间中排序，然后继续拿未排序区间的第一个元素，加入排序区间去排序，直到完成排序。像扑克牌，抽牌插入手牌中排序。(注意，从算法实现上，从排序区间的尾部开始比较更佳，如果从首部开始，一次比较可能是n-1次移位，不是一个好方案，n是元素数量)
@@ -108,13 +111,13 @@
 - 由于冒泡排序，虽然复杂度和交换次数一样；但是冒泡每次交换数据，都需要三次赋值操作，而插入排序仅需要一次赋值操作。
 - 稳定性：
     - 稳定，对于相同大小的值，先出现的排在前面。
-##  选择排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/SortSelection.java)
+###  选择排序 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/SortSelection.java)
 - 原理：分为排序和未排序区间，每次都从未排序区间拿到最值，然后放到排序区间尾部（这个位置原来的数和最值位置交换，可能把与未排序区间数值大小相等的数字，放到更后面，所以不稳定）
 - 空间复杂度O（1）
 - 时间复杂度最坏最好平均都是O(n^2)
 - 稳定性：
         - 不稳定，他的原理决定了它的不稳定性。
-## 归并排序 
+### 归并排序 
 - 总是一分为二处理，处理好了再合并。分治思路+递归实现。
 - 是一个稳定的算法，可以参看伪代码
 - 时间复杂度是nlogn
@@ -174,7 +177,7 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
 }
 或者你可以借助哨兵模式来简化判断条件
 ```
-## 快排(QuickSort) 
+### 快排(QuickSort) 
 - 思路从数组中是找到一个元素作为分区点，小于它的排在左边，大于它的排在右边；然后在左右区间继续找分区点，重复上一次操作，直到排序完成。分治思想+递归实现。锚点可以选定数组的最后一个元素(或者区间内随机的任意一个元素)。但是一个区间，排序完成后，锚点会位于区间的中间位置。
 - 原地排序算法，这优于归并排序。
 - 时间复杂度是O(nlogn)，和归并一样
@@ -221,10 +224,39 @@ getPartition(array,start,end){
   return i;
 }
 ```
-# 递归（recursion）
+# Search
+## 递归（recursion）
 - 层级
 - 终止条件
-# 二分查找（Binary Search）
+## 回溯
+## 剪枝
+## Brandth-First-Search(base on Graph or Tree)
+- 类似一层层的水波；算法实现上思路上很像摇色子，一层层向外把每层色子扫进色子杯中，在扫下一层前，先把色子一一拿出（扫一下层的动作等介于拿出色子的时候把下一层的子色子放进杯中）
+- 复杂度
+- 偏向暴力求解
+- leetcoe:104,111
+- 伪代码
+```java
+    BFS(Node){
+      queue=LinkedList<>();
+      queue.add(Node);
+      while(!queue.isEmpty){
+        node=queue.poll();
+        ...
+        Nodes=getRelativeNodes(node);
+        queue.add(Nodes);
+        ...
+      }
+    }
+```
+## Deepth-First-Search(base on Graph or Tree)
+- 回溯思想
+- 类似走迷宫，适合递归实现或者迭代实现
+- 复杂度
+- 偏向暴力求解
+- leetcoe:104,111
+# 基础技巧
+## 二分查找（Binary Search）
 - 条件  
     - 有序数据，可以通过下标找到数据，可以理解为仅使用于数组
     - 数据相对而言是静态的，不会频繁变化
@@ -267,12 +299,28 @@ while(start<=end){
 return -1;
 }
 ```
-
-# HEAP
+## 分治（Divide&Conquer）
+- Divide:Problem-->SubProblem1,SubProblem2...
+- Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
+- Merge:Answer1+Answer2+...=Answer
+## 贪心算法
+- 条件
+    - 可以分治
+- 每次都决定一个当前最优选项
+- 缺点：解决的问题范围小，不可修改做过的决定
+# 动态规划
+- 条件
+    - 可以分治
+- 存储每一步的决定，可回退
+## 背包问题
+## 最长子序列
+## 技术问题
+# Data Structures
+## HEAP
 - 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
 - 堆中的每个节点的值必须大于等于（或者小于等于）其子树中每个节点的值
-# Stack
-# Queue
+## Stack
+## Queue
 - PriorityQueue（默认是递增的队列，也就是小顶堆）,求最值(或者第几大元素)，求中位数等场景 （leetcode 703.）
   - 实现机制可以是HEAP
   - 也可以是 BinarySeachTree
@@ -296,29 +344,27 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
       }
     });
 ```
+## [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
+## Graph
+- 非线性表结构
+- 元素
+  - 定点
+  - 边
+  - 度
+  - 权重
+- 实现
+  - 领接矩阵
+  - 领接表
 
-# 分治（-Divide&Conquer）
-- Divide:Problem-->SubProblem1,SubProblem2...
-- Conquer:SubProblem1-->Answer1,SubProbelm2-->Answer2.....
-- Merge:Answer1+Answer2+...=Answer
-# Brandth-First-Search(base on Graph)
-# Deepth-First-Search(base on Graph)
-# 动态规划
-- 条件
-    - 可以分治
-- 存储每一步的决定，可回退
-# 贪心算法
-- 条件
-    - 可以分治
-- 每次都决定一个当前最优选项
-- 缺点：解决的问题范围小，不可修改做过的决定
-# [Tree](https://github.com/BryceLee/algorithms-learning/blob/master/data-structure/tree.md)
-# Graph
 # Cache
 - LRU
     - 新增数据被添加到链表头部，添加满了，最后的数据是被丢弃。[Lru](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#2-%E6%9C%80%E8%BF%91%E6%9C%80%E4%B9%85%E6%9C%AA%E4%BD%BF%E7%94%A8)
 # 推荐阅读
 - [真正支配世界的十种算法](https://www.infoq.cn/article/mBKst3xjImwCqm5YPXOA)
+- [刷 LeetCode 吃力正常吗？](https://www.zhihu.com/question/31092580)
+- [水中的鱼 blog](http://fisherlei.blogspot.com/)
+- [数据结构与算法 知乎专栏](https://zhuanlan.zhihu.com/
+c_1065652699701305344)
 # Thanks:
 - 数据结构与算法之美
 - [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#1-%E6%9C%80%E4%BD%B3)
