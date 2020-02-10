@@ -370,7 +370,7 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
 - [刷 LeetCode 吃力正常吗？](https://www.zhihu.com/question/31092580)
 - [水中的鱼 blog](http://fisherlei.blogspot.com/)
 - [数据结构与算法 知乎专栏](https://zhuanlan.zhihu.com/c_1065652699701305344)
-## Finonacci
+## Fibonacci
 [拜托，面试别再问我斐波那契数列了！！！](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651961606&idx=1&sn=0ad1a2eec0c2a0187034c258ef63fab2&chksm=bd2d0cda8a5a85cc1cee07fca7d877a79d7146aac5021c55340a8b6ae595942319d496d51806&scene=21)
 # Thanks:
 - 数据结构与算法之美
