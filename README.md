@@ -16,6 +16,8 @@
 |26|[remove duplicates from sorted array][026]|Array|[java][026]
 |27|[remove element][027]|Array,Two Pointers|[java][027]
 |35|[search insert position][035]|Binary Search|[java][035]
+|51| [n-queens](https://leetcode-cn.com/problems/n-queens/)|Backtracking|
+|52| [n-queens-ii](https://leetcode-cn.com/problems/n-queens-ii/)|Backtracking|
 |53| [maximum subarray][053]|Array|[java][053]
 |66| [Plus One][066]|Array|[java][066]
 |69| [Sqrt(x)][069]|Math|[java][069]
@@ -32,45 +34,48 @@
 |[225](https://leetcode-cn.com/problems/implement-stack-using-queues/)|[Implement Stack using Queues][225]|Stack|[java][225]
 |[232](https://leetcode-cn.com/problems/implement-queue-using-stacks/submissions/)|[ Implement Queue using Stacks][232]|Stack|[ java][232]
 |[349](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|[ Intersection of Two Arrays][349]|Sort,HashTable,Two Pointers|[ java][349]
+|559| [longest-univalue-path][687]|Recursion BFS,DFS,Tree|[java][559]
 |687| [longest-univalue-path][687]|Recursion|[java][687]
 |783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree| [java][783]
 |938| [range-sum-of-bst][938]|Recursion,Binary Search Tree|[java][938]
 |[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree|[java][1038]
 |[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy|[java][1046]
 
-[001]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/001.md
-[002]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/002.md
-[003]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/003.md
-[007]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/007.md
-[009]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/009.md
-[011]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/011.md
-[015]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/015.md
-[020]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/020.md
-[021]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/021.md
-[026]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/026.md
-[027]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/027.md
-[035]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/035.md
-[053]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/053.md
-[066]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/066.md
-[069]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/069.md
-[070]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/070.md
-[104]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/104.java
-[111]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/111.java
-[121]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/121.md
-[122]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/122.md
-[136]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/136.md
-[141]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/141.md
-[142]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/142.md
-[160]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/160.md
-[206]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/206.md
-[225]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/225.md
-[232]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/232.md
-[349]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/349.md
-[687]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/687.md
-[783]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/783.md
-[938]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/938.md
-[1038]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1038.md
-[1046]:https://github.com/BryceLee/algorithms-learning/blob/master/leetcode/1046.md
+[001]:./leetcode/001.md
+[002]:./leetcode/002.md
+[003]:./leetcode/003.md
+[007]:./leetcode/007.md
+[009]:./leetcode/009.md
+[011]:./leetcode/011.md
+[015]:./leetcode/015.md
+[020]:./leetcode/020.md
+[021]:./leetcode/021.md
+[026]:./leetcode/026.md
+[027]:./leetcode/027.md
+[035]:./leetcode/035.md
+[053]:./leetcode/053.md
+[066]:./leetcode/066.md
+[069]:./leetcode/069.md
+[070]:./leetcode/070.java
+[104]:./leetcode/104.java
+[111]:./leetcode/111.java
+[121]:./leetcode/121.md
+[122]:./leetcode/122.md
+[136]:./leetcode/136.md
+[141]:./leetcode/141.md
+[142]:./leetcode/142.md
+[160]:./leetcode/160.md
+[206]:./leetcode/206.md
+[225]:./leetcode/225.md
+[232]:./leetcode/232.md
+[349]:./leetcode/349.md
+[559]:./leetcode/559.java
+[687]:./leetcode/687.md
+[783]:./leetcode/783.md
+[783]:./leetcode/559.java
+[938]:./leetcode/938.md
+[1038]:./leetcode/1038.md
+[1046]:./leetcode/1046.md
 # Algorithms
 ## 排序(sort)
 - 涉及的概念
@@ -230,6 +235,7 @@ getPartition(array,start,end){
 - 终止条件
 ## 回溯
 ## 剪枝
+- 专注最优解，把非最优解的分支剪除。
 ## Brandth-First-Search(base on Graph or Tree)
 - 类似一层层的水波；算法实现上思路上很像摇色子，一层层向外把每层色子扫进色子杯中，在扫下一层前，先把色子一一拿出（扫一下层的动作等介于拿出色子的时候把下一层的子色子放进杯中）
 - 复杂度
@@ -363,8 +369,9 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
 - [真正支配世界的十种算法](https://www.infoq.cn/article/mBKst3xjImwCqm5YPXOA)
 - [刷 LeetCode 吃力正常吗？](https://www.zhihu.com/question/31092580)
 - [水中的鱼 blog](http://fisherlei.blogspot.com/)
-- [数据结构与算法 知乎专栏](https://zhuanlan.zhihu.com/
-c_1065652699701305344)
+- [数据结构与算法 知乎专栏](https://zhuanlan.zhihu.com/c_1065652699701305344)
+## Finonacci
+[拜托，面试别再问我斐波那契数列了！！！](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651961606&idx=1&sn=0ad1a2eec0c2a0187034c258ef63fab2&chksm=bd2d0cda8a5a85cc1cee07fca7d877a79d7146aac5021c55340a8b6ae595942319d496d51806&scene=21)
 # Thanks:
 - 数据结构与算法之美
 - [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md#1-%E6%9C%80%E4%BD%B3)
