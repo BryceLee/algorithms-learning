@@ -337,16 +337,11 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
         //System.out.println("o1=" + o1 + ",o2=" + o2);
         //o2 is in front of o1  
         //if (o1>o2){
-          //return 1;//整数递增
+          //return 1;//正数递增
         //}else {
           //return -1;//负数递减
         //}
         return o2 - o1;
-        if（o2>o1）{
-          return -1;
-        }else{
-          return 1;
-        }
       }
     });
 ```
