@@ -77,6 +77,7 @@
 [1038]:./leetcode/1038.md
 [1046]:./leetcode/1046.md
 # Algorithms
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/800px-Comparison_computational_complexity.svg.png)
 ## 排序(sort)
 - 涉及的概念
     - 有序度，是有序元素对的数量，有序元素对满足，如果i<j，则a[i]<=a[j]
