@@ -77,6 +77,7 @@
 [1038]:./leetcode/1038.md
 [1046]:./leetcode/1046.md
 # Algorithms
+### The picture shows the number of operations N versus input size n for each function
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/800px-Comparison_computational_complexity.svg.png)
 ## 排序(sort)
 - 涉及的概念
