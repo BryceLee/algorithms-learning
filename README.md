@@ -128,12 +128,13 @@
 - 总是一分为二处理，处理好了再合并。分治思路+递归实现。
 - 是一个稳定的算法，可以参看伪代码
 - 时间复杂度是nlogn
+  - 稳定性：不稳定（和快排相比的重大缺点）
   - 推导过程： 
     - T(n)=2*T(n/2)+n 每次合并都需要两个子数据的时间和合并两个子数组的时间
         - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
         ..
         - T(n)=2^mT(n/(2^m))+m*n
-        - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
+        - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*n+log2(n)*n (注：C是一个常数)-->O(nlogn)
     - 非原地排序算法（合并子数组，需要额外空间）
     - 空间复杂度是O(n)
 
@@ -151,10 +152,10 @@ merge(int[] array,int start,int end){
   int middle=(start+end)/2;
   merge(array,start,middle);
   merge(array,middle+1,end);
-  mergeArray(array[start..end],array[start..middle],arrat[middle+1..end])
+  mergeArray(array[start..end],array[start..middle],array[middle+1..end])
 }
 
-mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
+mergeArray(array[start..end],array[start..middle],array[middle+1..end]){
   int i=start,j=midlle+1,k=0;
   int[] temp=new int[]{end-start};
   while(i<=midlle&&j<=end){
@@ -194,7 +195,7 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
       ..
       - T(n)=2^mT(n/(2^m))+m*n
       - 特殊值法，当T(n/(2^m))=T(1)时 -->n/(2^m)=1
-      - 所以m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
+      - 所以m=log2 (n)-->T(n)=C*n+log2(n)*n (注：C是一个常数) -->O(nlogn)
 - 不稳定，分区点在交换的时候就可能导致不稳定
 - 极端情况下是O(n^2)，比如递增数组，每次又选最后一个数为分区点。
 - [java code](./sort/QuickSort.java)
