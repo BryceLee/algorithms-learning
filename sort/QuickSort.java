@@ -5,7 +5,7 @@ public class QuickSort {
     public static void main(String[] args) {
         changeTime = 0;
         timeN = 0;
-        int[] todosort = new int[] { 1, 52, 5, 11, 42 };
+        int[] todosort = new int[] { 1, 5,2,3,4};
         sort(todosort, 0, todosort.length - 1);
         for (int i = 0; i < todosort.length; i++) {
             System.out.println(todosort[i]);
@@ -27,6 +27,7 @@ public class QuickSort {
     public static int getPatition(int[] array, int start, int end) {
         int P = array[end];
         int i = start, j = start;
+        System.out.println("得到分区点函数，start:"+start+",end:"+end);
         while (j < end) {
             if (array[j] < P) {// if you want to array in order of descdening,you can replayce "<" with ">"
                 swap(array, i, j);
@@ -37,7 +38,7 @@ public class QuickSort {
             j++;
             timeN++;
         }
-        // 前面所以的操作就是为了找到P的位置
+        // 前面所有的操作就是为了找到P的位置i
         swap(array, i, end);
         System.out.println("p=" + i);
         timeN++;
@@ -45,6 +46,11 @@ public class QuickSort {
     }
 
     public static void swap(int[] array, int a, int b) {
+        if(a==b){
+            System.out.println("跳过交换"+a+"和"+b);
+            return;
+        }
+        System.out.println("交换"+a+"和"+b);
         changeTime++;
         int temp = array[a];
         array[a] = array[b];

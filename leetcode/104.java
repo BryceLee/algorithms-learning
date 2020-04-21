@@ -50,8 +50,8 @@ class Solution {
         int depth = 0;
         while (!list.isEmpty()) {
             depth++;
-            int size = list.size();
-            for (int i = 0; i < size; i++) {
+            int size = list.size();//must be like this ,no like for(int i=0;i<list,size()....)
+            for (int i = 0; i <  size; i++) {
                 TreeNode node = list.poll();
                 if (node.left != null) {
                     list.add(node.left);

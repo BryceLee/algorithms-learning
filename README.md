@@ -34,12 +34,15 @@
 |[225](https://leetcode-cn.com/problems/implement-stack-using-queues/)|[Implement Stack using Queues][225]|Stack|[java][225]
 |[232](https://leetcode-cn.com/problems/implement-queue-using-stacks/submissions/)|[ Implement Queue using Stacks][232]|Stack|[ java][232]
 |[349](https://leetcode-cn.com/problems/intersection-of-two-arrays/)|[ Intersection of Two Arrays][349]|Sort,HashTable,Two Pointers|[ java][349]
-|559| [longest-univalue-path][687]|Recursion BFS,DFS,Tree|[java][559]
+|509| [fibonacci-number](https://leetcode-cn.com/problems/fibonacci-number/)|Fibonacci|[java](./leetcode/509.java)
+|559| [maximum-depth-of-n-ary-tree/](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/)|Recursion BFS,DFS,Tree|[java][559]
 |687| [longest-univalue-path][687]|Recursion|[java][687]
+|746| [min-cost-climbing-stairs](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)|DP|[java](./leetcode/746.java)
 |783| [minimum-distance-between-bst-nodes][783]|Recursion,Binary Search Tree| [java][783]
 |938| [range-sum-of-bst][938]|Recursion,Binary Search Tree|[java][938]
 |[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree|[java][1038]
 |[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy|[java][1046]
+|1137| [di-n-ge-tai-bo-na-qi-shu-by-leetcode](https://leetcode-cn.com/problems/n-th-tribonacci-number/solution/di-n-ge-tai-bo-na-qi-shu-by-leetcode/)|Recursion,Fibonacci|[java][./leetcode/1137.java]
 
 [001]:./leetcode/001.md
 [002]:./leetcode/002.md
@@ -53,7 +56,7 @@
 [026]:./leetcode/026.md
 [027]:./leetcode/027.md
 [035]:./leetcode/035.md
-[053]:./leetcode/053.md
+[053]:./leetcode/053.java
 [066]:./leetcode/066.md
 [069]:./leetcode/069.md
 [070]:./leetcode/070.java
@@ -235,6 +238,7 @@ getPartition(array,start,end){
 - 终止条件
 ## 回溯
 ## 剪枝
+- 剪掉非最优的无用分支，优化复杂度，像给树修剪枝干。
 - 专注最优解，把非最优解的分支剪除。
 ## Brandth-First-Search(base on Graph or Tree)
 - 类似一层层的水波；算法实现上思路上很像摇色子，一层层向外把每层色子扫进色子杯中，在扫下一层前，先把色子一一拿出（扫一下层的动作等介于拿出色子的时候把下一层的子色子放进杯中）
@@ -293,7 +297,7 @@ search(array,target,0,array.length-1);
 }
 search(int[] array,int target,int start,int end){
 while(start<=end){
-  int mid=start+((end-start)>>2)
+  int mid=start+((end-start)>>1)
   if(array[mid]==target){
     return mid;
   }else if(target>array[mid]){
@@ -320,7 +324,6 @@ return -1;
 - 存储每一步的决定，可回退
 ## 背包问题
 ## 最长子序列
-## 技术问题
 # Data Structures
 ## HEAP
 - 堆必须是一个完全二叉树。完全二叉树要求，除了最后一层，其他层的节点个数都是满的，最后一层的节点都靠左排列。
