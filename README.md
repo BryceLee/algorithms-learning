@@ -42,7 +42,7 @@
 |938| [range-sum-of-bst][938]|Recursion,Binary Search Tree|[java][938]
 |[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree|[java][1038]
 |[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy|[java][1046]
-|1137| [di-n-ge-tai-bo-na-qi-shu-by-leetcode](https://leetcode-cn.com/problems/n-th-tribonacci-number/solution/di-n-ge-tai-bo-na-qi-shu-by-leetcode/)|Recursion,Fibonacci|[java][./leetcode/1137.java]
+|1137| [n-th-tribonacci-number](https://leetcode-cn.com/problems/n-th-tribonacci-number/solution/di-n-ge-tai-bo-na-qi-shu-by-leetcode/)|Recursion,Fibonacci|[java][1137]
 
 [001]:./leetcode/001.md
 [002]:./leetcode/002.md
@@ -79,6 +79,7 @@
 [938]:./leetcode/938.md
 [1038]:./leetcode/1038.md
 [1046]:./leetcode/1046.md
+[1137]:./leetcode/1137.java
 # Algorithms
 ### The picture shows the number of operations N versus input size n for each function
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/800px-Comparison_computational_complexity.svg.png)
