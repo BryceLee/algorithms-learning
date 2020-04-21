@@ -136,7 +136,7 @@
         - T(n)=2^mT(n/(2^m))+m*n
         - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*n+log2(n)*n (注：C是一个常数)-->O(nlogn)
     - 非原地排序算法（合并子数组，需要额外空间）
-    - 空间复杂度是O(n)
+    - 空间复杂度是O(n)(临时存储空间n)
 
 - 大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
 ``` java
