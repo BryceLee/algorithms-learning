@@ -80,6 +80,8 @@
 [1038]:./leetcode/1038.md
 [1046]:./leetcode/1046.md
 # Algorithms
+### The picture shows the number of operations N versus input size n for each function
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/800px-Comparison_computational_complexity.svg.png)
 ## 排序(sort)
 - 涉及的概念
     - 有序度，是有序元素对的数量，有序元素对满足，如果i<j，则a[i]<=a[j]
@@ -101,7 +103,7 @@
 - 复杂度
     - 时间
         - 最好情况，不需要交换，一次冒泡，时间复杂度O(n)
-            - 最坏情况，是目标顺序的逆序，时间复杂度O(n^2)
+            - 最坏情况，待排序输入正好是目标顺序的逆序，时间复杂度O(n^2)
     - 空间
         - 平均情况下比较次数取中间值:n*(n-1)/4，取平均时间复杂度O(n^2)（非严格推导的复杂度）
         - 空间复杂度上仅需要常量级的临时空间，是O(1),是原地排序算法。
@@ -114,7 +116,7 @@
             - 空间复杂度是O（1），是一个原地排序算法
     - 时间
             - 最好情况下，就是排好序的情况，每个数都比较一次即插入到本身位置，时间复杂度是O（n）
-            - 最坏情况下，正好是目标顺序的逆序，每次插入都在数组的首位插入，时间复杂度是O(n^2)
+            - 最坏情况下，待排序输入正好是目标顺序的逆序，每次插入都在数组的首位插入，时间复杂度是O(n^2)
             - 平均情况下，O(n^2)
 - 由于冒泡排序，虽然复杂度和交换次数一样；但是冒泡每次交换数据，都需要三次赋值操作，而插入排序仅需要一次赋值操作。
 - 稳定性：
@@ -129,14 +131,15 @@
 - 总是一分为二处理，处理好了再合并。分治思路+递归实现。
 - 是一个稳定的算法，可以参看伪代码
 - 时间复杂度是nlogn
+  - 稳定性：不稳定（和快排相比的重大缺点）
   - 推导过程： 
     - T(n)=2*T(n/2)+n 每次合并都需要两个子数据的时间和合并两个子数组的时间
         - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
         ..
         - T(n)=2^mT(n/(2^m))+m*n
-        - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
+        - 当T(n/(2^m))=T(1)时 -->n/(2^m)=1-->m=log2 (n)-->T(n)=C*n+log2(n)*n (注：C是一个常数)-->O(nlogn)
     - 非原地排序算法（合并子数组，需要额外空间）
-    - 空间复杂度是O(n)
+    - 空间复杂度是O(n)(临时存储空间n)
 
 - 大体思路如下，具体可以看代码实现 [java code](https://github.com/BryceLee/algorithms-learning/blob/master/sort/mergesort.java)
 ``` java
@@ -152,10 +155,10 @@ merge(int[] array,int start,int end){
   int middle=(start+end)/2;
   merge(array,start,middle);
   merge(array,middle+1,end);
-  mergeArray(array[start..end],array[start..middle],arrat[middle+1..end])
+  mergeArray(array[start..end],array[start..middle],array[middle+1..end])
 }
 
-mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
+mergeArray(array[start..end],array[start..middle],array[middle+1..end]){
   int i=start,j=midlle+1,k=0;
   int[] temp=new int[]{end-start};
   while(i<=midlle&&j<=end){
@@ -189,13 +192,13 @@ mergeArray(array[start..end],array[start..middle],arrat[middle+1..end]){
 - 思路从数组中是找到一个元素作为分区点，小于它的排在左边，大于它的排在右边；然后在左右区间继续找分区点，重复上一次操作，直到排序完成。分治思想+递归实现。锚点可以选定数组的最后一个元素(或者区间内随机的任意一个元素)。但是一个区间，排序完成后，锚点会位于区间的中间位置。
 - 原地排序算法，这优于归并排序。
 - 时间复杂度是O(nlogn)，和归并一样
-      - 推导过程： 
-        - T(n)=2*T(n/2)+n 每次分区都需要两个子数据的时间加上找到分区点的时间
-        - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
-        ..
-        - T(n)=2^mT(n/(2^m))+m*n
-        - 特殊值法，当T(n/(2^m))=T(1)时 -->n/(2^m)=1
-        - 所以m=log2 (n)-->T(n)=C*N+log2(n)*n -->O(nlogn)
+    - 推导过程： 
+      - T(n)=2*T(n/2)+n 每次分区都需要两个子数据的时间加上找到分区点的时间
+      - T(n)=2*(2T(n/4)+n/2)+n=4T(n/4)+2n
+      ..
+      - T(n)=2^mT(n/(2^m))+m*n
+      - 特殊值法，当T(n/(2^m))=T(1)时 -->n/(2^m)=1
+      - 所以m=log2 (n)-->T(n)=C*n+log2(n)*n (注：C是一个常数) -->O(nlogn)
 - 不稳定，分区点在交换的时候就可能导致不稳定
 - 极端情况下是O(n^2)，比如递增数组，每次又选最后一个数为分区点。
 - [java code](./sort/QuickSort.java)
@@ -340,16 +343,11 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
         //System.out.println("o1=" + o1 + ",o2=" + o2);
         //o2 is in front of o1  
         //if (o1>o2){
-          //return 1;//整数递增
+          //return 1;//正数递增
         //}else {
           //return -1;//负数递减
         //}
         return o2 - o1;
-        if（o2>o1）{
-          return -1;
-        }else{
-          return 1;
-        }
       }
     });
 ```
@@ -373,6 +371,7 @@ Queue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
 - [刷 LeetCode 吃力正常吗？](https://www.zhihu.com/question/31092580)
 - [水中的鱼 blog](http://fisherlei.blogspot.com/)
 - [数据结构与算法 知乎专栏](https://zhuanlan.zhihu.com/c_1065652699701305344)
+- [The 10 must-know algorithms and data structures for a software engineer](https://www.linkedin.com/pulse/10-must-know-algorithms-data-structures-software-pablo-g-cisneros/)
 ## Fibonacci
 [拜托，面试别再问我斐波那契数列了！！！](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651961606&idx=1&sn=0ad1a2eec0c2a0187034c258ef63fab2&chksm=bd2d0cda8a5a85cc1cee07fca7d877a79d7146aac5021c55340a8b6ae595942319d496d51806&scene=21)
 # Thanks:
