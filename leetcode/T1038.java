@@ -12,7 +12,7 @@ public class T938 {
      * left; TreeNode right; TreeNode(int x) { val = x; } }
      */
     class Solution {
-        int sum=0;
+        int sum=0;//反向中序遍历，记得巧用变量存值
         public TreeNode bstToGst(TreeNode root) {
             if(root==null){
                 return null;
