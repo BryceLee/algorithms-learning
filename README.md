@@ -43,7 +43,7 @@
 |[1038](https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/)| [binary-search-tree-to-greater-sum-tree][1038]|Binary Search Tree|[java][1038]
 |[1046](https://leetcode-cn.com/problems/last-stone-weight/)| [last-stone-weight][1046]|Heap,Greedy|[java][1046]
 |1137| [di-n-ge-tai-bo-na-qi-shu-by-leetcode](https://leetcode-cn.com/problems/n-th-tribonacci-number/solution/di-n-ge-tai-bo-na-qi-shu-by-leetcode/)|Recursion,Fibonacci|[java][./leetcode/1137.java]
-
+|面试题BiNode|[binode-lcc](https://leetcode-cn.com/problems/binode-lcci/)|Binary Serach Tree,Recustion|[java](./leetcode/interviewBiNode.java)|
 [001]:./leetcode/001.md
 [002]:./leetcode/002.md
 [003]:./leetcode/003.md
