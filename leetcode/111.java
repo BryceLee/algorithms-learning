@@ -52,7 +52,7 @@ class Solution {
         int l = minDepth(root.left);
         int r = minDepth(root.right);
         if (root.left == null || root.right == null) {
-            return l + r + 1;// 子节点最小值+本身1层；一度不理解，其实就是只要有孩子，就要继续计算下去，就是子节点的最值加上本身一层
+            return l + r + 1;// 子节点最小值(其中一个必等0)+本身1层；一度不理解，其实就是只要有孩子，就要继续计算下去，就是子节点的最值加上本身一层
         }
         return Math.min(l, r) + 1;// 子节点最小值+本身1层
     }
